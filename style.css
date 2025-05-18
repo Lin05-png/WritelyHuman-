@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #222;
+}
+
+p {
+  color: #555;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+select,
+button {
+  padding: 10px 15px;
+  font-size: 0.95em;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e4e4e4;
+}
+
+#humanizeBtn {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #00a86b;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+#humanizeBtn:hover {
+  background-color: #007a53;
+}
+
+.output {
+  margin-top: 25px;
+}
+
+.output-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #888;
+  font-size: 0.9em;
+}
