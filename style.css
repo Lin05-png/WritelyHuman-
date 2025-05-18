@@ -1,94 +1,58 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
+/* style.css for WritelyHuman */
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f6f8fc; color: #333; }
 
-header {
-  text-align: center;
-  padding-bottom: 10px;
-}
+.container { width: 90%; max-width: 1200px; margin: auto; }
 
-h1 {
-  font-size: 2em;
-  color: #222;
-}
+.hero { background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); color: white; text-align: center; padding: 4rem 1rem; border-bottom: 5px solid #fff; }
 
-p {
-  color: #555;
-}
+.hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
 
-textarea {
-  width: 100%;
-  min-height: 120px;
-  padding: 12px;
-  font-size: 1em;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  resize: vertical;
-  margin-top: 10px;
-  box-sizing: border-box;
-}
+.logo-text { font-weight: 700; color: #ffef00; }
 
-.controls {
-  margin-top: 20px;
-}
+.logo-human { font-weight: 700; color: #00ffc8; }
 
-.options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-  align-items: center;
-}
+.hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
 
-select,
-button {
-  padding: 10px 15px;
-  font-size: 0.95em;
-  border-radius: 6px;
-  border: 1px solid #bbb;
-  background-color: #fff;
-  cursor: pointer;
-}
+.cta-button { background: #00ffc8; color: #000; padding: 0.8rem 1.5rem; border: none; border-radius: 25px; font-size: 1rem; cursor: pointer; transition: 0.3s; text-decoration: none; }
 
-button:hover {
-  background-color: #e4e4e4;
-}
+.cta-button:hover { background: #ffef00; color: #000; }
 
-#humanizeBtn {
-  width: 100%;
-  margin-top: 15px;
-  background-color: #00a86b;
-  color: white;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
+.features { background-color: #ffffff; padding: 2rem; border-radius: 10px; margin-top: 2rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
 
-#humanizeBtn:hover {
-  background-color: #007a53;
-}
+.features h2, .tool-section h2 { text-align: center; color: #4b0082; }
 
-.output {
-  margin-top: 25px;
-}
+.features ul { list-style: none; padding-left: 0; }
 
-.output-buttons {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
+.features li { margin-bottom: 1rem; font-size: 1.1rem; }
 
-footer {
-  text-align: center;
-  margin-top: 30px;
-  color: #888;
-  font-size: 0.9em;
-}
+.tool-section { margin: 2rem auto; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+
+.tool-section label, .tool-section select, .tool-section textarea, .tool-section button { display: block; width: 100%; margin-top: 1rem; font-size: 1rem; }
+
+.tool-section select, .tool-section textarea { padding: 0.8rem; border-radius: 10px; border: 1px solid #ccc; resize: vertical; }
+
+.tool-section textarea { height: 150px; margin-bottom: 1rem; }
+
+.tool-section button { background: #6a11cb; color: white; border: none; border-radius: 25px; padding: 0.8rem; cursor: pointer; transition: 0.3s; }
+
+.tool-section button:hover { background: #2575fc; }
+
+.notice { text-align: center; margin: 2rem auto; font-size: 0.95rem; color: #666; }
+
+footer { background: #111; color: #ccc; padding: 2rem 1rem; margin-top: 2rem; }
+
+.footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+
+footer h3 { color: #fff; }
+
+footer ul { list-style: none; padding: 0; }
+
+footer ul li a { color: #ccc; text-decoration: none; }
+
+footer ul li a:hover { text-decoration: underline; }
+
+.footer-note { text-align: center; font-size: 0.9rem; margin-top: 2rem; color: #888; }
+
+/* Highlight changes in rewritten text */ .marked-change { background-color: #fff799; color: #000; padding: 0 4px; border-radius: 4px; font-weight: bold; }
+
