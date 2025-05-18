@@ -2,78 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WritelyHuman – Humanize AI Text</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f9;
-    }
-    header {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 1.5rem;
-    }
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 1rem;
-    }
-    textarea {
-      width: 100%;
-      height: 150px;
-      padding: 1rem;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-    button {
-      padding: 0.7rem 1.2rem;
-      font-size: 1rem;
-      margin-top: 1rem;
-      background: #4caf50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    #output {
-      white-space: pre-wrap;
-      background: white;
-      padding: 1rem;
-      margin-top: 1rem;
-      border: 1px solid #ccc;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WritelyHuman – AI Text Humanizer Tool | Avoid AI Detection | 30+ Languages" />
+  <meta name="keywords" content="AI humanizer, undetectable AI text, human writing, rewrite AI, bypass AI detector" />
+  <meta name="author" content="WritelyHuman" />
+  <title>WritelyHuman | AI Text Humanizer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>WritelyHuman – Humanize AI Text in One Click</header>
-  <main>
-    <p>Paste AI-generated text below and click "Humanize Now"</p>
-    <textarea id="inputText" placeholder="Paste your AI text here..."></textarea>
-    <button onclick="humanize()">Humanize Now</button>
-    <div id="output"></div>
-  </main>
-  <script>
-    function humanize() {
-      const text = document.getElementById("inputText").value;
-      if (!text.trim()) {
-        alert("Please paste some text!");
-        return;
-      }
+  <div class="container">
+    <header>
+      <h1>WritelyHuman</h1>
+      <p>Bypass AI detectors. Rewrite text like a real human.</p>
+    </header>
 
-      // Simulate humanizing
-      const humanized = text
-        .replace(/[\.,]/g, match => match === '.' ? '. ' : ', ')
-        .replace(/\bis\b/g, "appears to be")
-        .replace(/\bcan\b/g, "has the ability to")
-        .replace(/\bAI\b/gi, "advanced system")
-        .replace(/\bI think\b/gi, "From my perspective");
+    <section class="controls">
+      <textarea id="inputText" placeholder="Paste AI text here..."></textarea>
 
-      document.getElementById("output").innerText = humanized + "\n\n✅ Humanized by WritelyHuman";
-    }
-  </script>
+      <div class="options">
+        <select id="languageSelect">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="ru">Russian</option>
+          <option value="zh">Chinese</option>
+          <option value="ja">Japanese</option>
+          <option value="ko">Korean</option>
+          <option value="ar">Arabic</option>
+          <!-- Add more language options up to 30+ -->
+        </select>
+
+        <select id="toneSelect">
+          <option value="formal">Formal</option>
+          <option value="casual">Casual</option>
+          <option value="academic">Academic</option>
+          <option value="conversational">Conversational</option>
+          <option value="professional">Professional</option>
+        </select>
+
+        <button onclick="startMicrophone()">🎤 Speak</button>
+        <button onclick="clearText()">🗑️ Clear</button>
+      </div>
+
+      <button id="humanizeBtn">Humanize Text</button>
+    </section>
+
+    <section class="output">
+      <textarea id="outputText" placeholder="Humanized text will appear here..." readonly></textarea>
+      <div class="output-buttons">
+        <button onclick="copyOutput()">📋 Copy</button>
+        <button onclick="regenerateText()">🔁 Regenerate</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 WritelyHuman | Free AI Humanizer Tool | SEO & AdSense Ready</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
