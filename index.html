@@ -1,63 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="aZELGtkjlI6CUZ1x9CWH3obOfAnl3M5-lhVlWFkFKhM" />
-  <meta name="description" content="WritelyHuman transforms AI-generated text into natural, human-like writing with ease." />
-  <title>WritelyHuman – AI Text Humanizer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="WritelyHuman is a next-gen AI humanizer that turns your thoughts — spoken or written — into natural, detection-free, professional-grade human content across 30+ global languages.">
+  <meta name="keywords" content="AI humanizer, text to human, bypass AI detection, AI rewriting tool, voice to human content, multilingual AI text converter">
+  <meta name="author" content="WritelyHuman Team">
+  <title>WritelyHuman – Speak or Paste, Get Perfect Human Text | 30+ Languages</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">WritelyHuman</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#terms">Terms</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body>  <header>
+    <h1>WritelyHuman</h1>
+    <p>Say it or paste it — we'll turn it into human-like, high-quality text. Detection-safe, private, and fluent in over 30 languages.</p>
+    <a href="#tool" class="cta-button">Start Now</a>
+  </header>  <section class="features">
+    <h2>What Makes WritelyHuman Unique</h2>
+    <ul>
+      <li><strong>Voice to Human:</strong> Speak directly into the tool — WritelyHuman will write and humanize your speech in real time.</li>
+      <li><strong>Multilingual Support:</strong> Create content in 30+ languages with natural fluency and tone. Great for global audiences.</li>
+      <li><strong>AI Detection Bypass:</strong> Avoid detection by tools like GPTZero, ZeroGPT, Turnitin AI, and Winston AI — safely and ethically.</li>
+      <li><strong>Context-Smart Humanizer:</strong> Not just rewriting — we understand context and convert AI or speech into audience-ready writing.</li>
+      <li><strong>Zero Data Stored:</strong> 100% privacy-first. No login, no tracking, no cookies. Your data never leaves your session.</li>
+    </ul>
+  </section>  <section id="tool" class="tool-section">
+    <h2>Use the AI Humanizer</h2>
+    <label for="language">Choose Language:</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+      <option value="hi">Hindi</option>
+      <option value="zh">Chinese</option>
+      <option value="ar">Arabic</option>
+      <option value="pt">Portuguese</option>
+      <option value="ru">Russian</option>
+      <option value="ja">Japanese</option>
+      <option value="ko">Korean</option>
+      <option value="it">Italian</option>
+      <option value="tr">Turkish</option>
+      <option value="pl">Polish</option>
+      <option value="uk">Ukrainian</option>
+      <option value="ro">Romanian</option>
+      <option value="nl">Dutch</option>
+      <option value="sv">Swedish</option>
+      <option value="fi">Finnish</option>
+      <option value="no">Norwegian</option>
+      <option value="da">Danish</option>
+      <option value="cs">Czech</option>
+      <option value="el">Greek</option>
+      <option value="th">Thai</option>
+      <option value="vi">Vietnamese</option>
+      <option value="ms">Malay</option>
+      <option value="id">Indonesian</option>
+      <option value="bn">Bengali</option>
+      <option value="fa">Persian</option>
+      <option value="he">Hebrew</option>
+    </select><textarea id="inputText" placeholder="Paste or speak your AI-generated content or idea..."></textarea>
+<button onclick="startListening()">🎤 Speak & Humanize</button>
+<button onclick="humanizeText()">Convert to Human Text</button>
+<textarea id="outputText" placeholder="Your refined, humanized output will appear here..."></textarea>
 
-  <main class="main-content container">
-    <section class="intro">
-      <h2>Make AI Text Sound Human</h2>
-      <p>Transform AI-generated content into clear, natural writing that flows effortlessly.</p>
-    </section>
+  </section>  <section class="note">
+    <p><strong>Usage Disclaimer:</strong> WritelyHuman is a productivity tool designed for fair use. Please avoid using it to mislead, plagiarize, or bypass academic integrity.</p>
+  </section>  <footer>
+    <div class="footer-sections">
+      <section>
+        <h3>About Us</h3>
+        <p>WritelyHuman is a precision AI rewriting platform built for creators, marketers, writers, and professionals. We combine speech-to-text and advanced rewriting to offer seamless, human-sounding content across industries and languages.</p>
+      </section><section>
+    <h3>Terms & Legal</h3>
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Content Ethics & Detection Transparency</a></li>
+      <li><a href="#">Data Privacy and Handling</a></li>
+    </ul>
+  </section>
 
-    <section class="tool-section">
-      <textarea id="inputText" placeholder="Paste your AI-generated text here..." rows="8"></textarea>
-      <button id="humanizeBtn">Humanize Text</button>
-      <div class="output-area">
-        <h3>Output</h3>
-        <pre id="outputText" aria-live="polite"></pre>
-        <button id="copyBtn">Copy Output</button>
-      </div>
-    </section>
-  </main>
+  <section>
+    <h3>Get in Touch</h3>
+    <p>Need support or want to collaborate?<br>Email: <a href="mailto:writelyhuman18@gmail.com">writelyhuman18@gmail.com</a></p>
+  </section>
+</div>
+<p class="copyright">© 2025 WritelyHuman. All rights reserved. Built for human expression and ethical AI use.</p>
 
-  <footer class="footer container">
-    <section id="about">
-      <h4>About WritelyHuman</h4>
-      <p>WritelyHuman helps you convert AI text into natural, readable writing, perfect for blogs, articles, and more.</p>
-    </section>
-    <section id="privacy">
-      <h4>Privacy Policy</h4>
-      <p>Your text stays on your device — we don't store or track your content.</p>
-    </section>
-    <section id="terms">
-      <h4>Terms & Conditions</h4>
-      <p>Use this tool responsibly. We are not liable for misuse of generated content.</p>
-    </section>
-    <section id="contact">
-      <h4>Contact</h4>
-      <p>Email: <a href="mailto:writelyhuman@gmail.com">writelyhuman@gmail.com</a></p>
-    </section>
-    <p class="copyright">© 2025 WritelyHuman</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+  </footer>  <script src="script.js"></script></body>
 </html>
