@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="aZELGtkjlI6CUZ1x9CWH3obOfAnl3M5-lhVlWFkFKhM" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="WritelyHuman – AI Text Humanizer Tool | Avoid AI Detection | 30+ Languages" />
-  <meta name="keywords" content="AI humanizer, undetectable AI text, human writing, rewrite AI, bypass AI detector" />
+
+  <!-- Google site verification -->
+  <meta name="google-site-verification" content="aZELGtkjlI6CUZ1x9CWH3obOfAnl3M5-lhVlWFkFKhM" />
+
+  <meta name="description" content="WritelyHuman – The ultimate AI Humanizer tool that supports 30+ languages. Perfect for making AI content sound real and human." />
+  <meta name="keywords" content="AI Humanizer, Humanize AI Text, Bypass AI Detection, WritelyHuman Tool, 30+ languages" />
   <meta name="author" content="WritelyHuman" />
-  <title>WritelyHuman | AI Text Humanizer</title>
+  <meta name="robots" content="index, follow" />
+  <title>WritelyHuman - Humanize AI Text Easily</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
+  <header>
+    <div class="container nav">
       <h1>WritelyHuman</h1>
-      <p>Bypass AI detectors. Rewrite text like a real human.</p>
-    </header>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="controls">
+  <main>
+    <section class="hero">
+      <h2>AI Humanizer Tool</h2>
+      <p>Convert robotic AI text into natural, human-like content. Supports <strong>30+ languages</strong>. SEO and AdSense ready.</p>
+    </section>
+
+    <section class="tool">
       <textarea id="inputText" placeholder="Paste AI text here..."></textarea>
-
-      <div class="options">
-        <select id="languageSelect">
-          <option value="en">English</option>
-          <option value="hi">Hindi</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-          <option value="de">German</option>
-          <option value="ru">Russian</option>
-          <option value="zh">Chinese</option>
-          <option value="ja">Japanese</option>
-          <option value="ko">Korean</option>
-          <option value="ar">Arabic</option>
-          <!-- Add more language options up to 30+ -->
-        </select>
-
-        <select id="toneSelect">
-          <option value="formal">Formal</option>
-          <option value="casual">Casual</option>
-          <option value="academic">Academic</option>
-          <option value="conversational">Conversational</option>
-          <option value="professional">Professional</option>
-        </select>
-
-        <button onclick="startMicrophone()">🎤 Speak</button>
-        <button onclick="clearText()">🗑️ Clear</button>
+      <button onclick="humanizeText()">Humanize</button>
+      <div id="outputBox">
+        <h3>Humanized Output</h3>
+        <pre id="outputText"></pre>
+        <button onclick="copyOutput()">Copy Text</button>
       </div>
-
-      <button id="humanizeBtn">Humanize Text</button>
+      <p class="support-note">Supports 30+ languages including English, Nepali, Hindi, Spanish, French, and more.</p>
     </section>
+  </main>
 
-    <section class="output">
-      <textarea id="outputText" placeholder="Humanized text will appear here..." readonly></textarea>
-      <div class="output-buttons">
-        <button onclick="copyOutput()">📋 Copy</button>
-        <button onclick="regenerateText()">🔁 Regenerate</button>
-      </div>
-    </section>
+  <footer>
+    <div class="container footer-content">
+      <section id="about">
+        <h4>About WritelyHuman</h4>
+        <p>WritelyHuman is an AI-powered humanizer that transforms AI-generated content into natural-sounding human text, helping you pass AI detectors and create authentic writing.</p>
+      </section>
 
-    <footer>
-      <p>&copy; 2025 WritelyHuman | Free AI Humanizer Tool </p>
-    </footer>
-  </div>
+      <section id="privacy">
+        <h4>Privacy Policy</h4>
+        <p>We value your privacy. No user data is stored or tracked. This tool works locally in your browser.</p>
+      </section>
+
+      <section id="terms">
+        <h4>Terms & Conditions</h4>
+        <p>This tool is provided as-is for educational and productivity use. You are responsible for how you use the output.</p>
+      </section>
+
+      <section id="contact">
+        <h4>Contact</h4>
+        <p>For suggestions or feedback, contact us via GitHub or email: writelyhuman@gmail.com</p>
+      </section>
+
+      <p class="bottom-note">© 2025 WritelyHuman. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
