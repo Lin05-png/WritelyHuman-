@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WritelyHuman – Humanize AI Text</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    button {
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      background: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #output {
+      white-space: pre-wrap;
+      background: white;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>WritelyHuman – Humanize AI Text in One Click</header>
+  <main>
+    <p>Paste AI-generated text below and click "Humanize Now"</p>
+    <textarea id="inputText" placeholder="Paste your AI text here..."></textarea>
+    <button onclick="humanize()">Humanize Now</button>
+    <div id="output"></div>
+  </main>
+  <script>
+    function humanize() {
+      const text = document.getElementById("inputText").value;
+      if (!text.trim()) {
+        alert("Please paste some text!");
+        return;
+      }
+
+      // Simulate humanizing
+      const humanized = text
+        .replace(/[\.,]/g, match => match === '.' ? '. ' : ', ')
+        .replace(/\bis\b/g, "appears to be")
+        .replace(/\bcan\b/g, "has the ability to")
+        .replace(/\bAI\b/gi, "advanced system")
+        .replace(/\bI think\b/gi, "From my perspective");
+
+      document.getElementById("output").innerText = humanized + "\n\n✅ Humanized by WritelyHuman";
+    }
+  </script>
+</body>
+</html>
