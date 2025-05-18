@@ -10,174 +10,154 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9ff;
+      color: #333;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f6fc;
-      color: #222;
+      padding: 0;
     }
     header {
-      background: linear-gradient(90deg, #3f51b5, #5c6bc0);
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
       color: white;
+      padding: 40px 20px;
       text-align: center;
-      padding: 3rem 1rem;
     }
     .cta-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #ffca28;
-      color: #333;
-      font-weight: bold;
-      border-radius: 8px;
+      background-color: #fff;
+      color: #4e54c8;
+      padding: 10px 20px;
+      border-radius: 5px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    .cta-button:hover {
-      background-color: #ffc107;
+      font-weight: bold;
     }
     .features, .tool-section, .note, footer {
-      padding: 2rem;
+      padding: 30px 20px;
       max-width: 900px;
       margin: auto;
     }
-    .features h2, .tool-section h2 {
-      text-align: center;
-      color: #3f51b5;
-    }
-    ul {
+    .features ul {
       list-style: none;
       padding: 0;
     }
-    ul li {
-      margin-bottom: 1rem;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 10px;
+    .features li {
+      background: #ffffff;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #4e54c8;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     textarea {
       width: 100%;
-      min-height: 150px;
-      margin-top: 1rem;
-      padding: 1rem;
-      border-radius: 10px;
+      min-height: 120px;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      font-size: 1rem;
     }
     select, button {
-      padding: 0.7rem;
-      margin-top: 1rem;
-      margin-right: 0.5rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: none;
-    }
-    button {
-      background-color: #4caf50;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #43a047;
-    }
-    .note {
-      background-color: #fff3cd;
-      border-left: 5px solid #ffecb5;
-      margin-top: 2rem;
-      padding: 1rem;
+      margin-top: 10px;
+      padding: 10px;
       border-radius: 5px;
-    }
-    footer {
-      background-color: #3f51b5;
+      border: none;
+      background: #4e54c8;
       color: white;
-      padding-top: 3rem;
+      font-weight: bold;
     }
-    .footer-sections {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .footer-sections section {
-      flex: 1 1 250px;
-      margin-bottom: 2rem;
-    }
-    footer a {
-      color: #ffca28;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    .copyright {
-      text-align: center;
-      padding: 1rem;
-      background-color: #2c387e;
-      margin-top: 2rem;
+    .highlight {
+      background-color: #d4f8d4;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>  <header>
+    <img src="logo.png" alt="WritelyHuman Logo" style="height: 60px;">
     <h1>WritelyHuman</h1>
-    <p>Transform robotic AI content into human-quality writing in 30+ languages — detection-free, charming, and real.</p>
-    <a href="#tool" class="cta-button">Start Humanizing</a>
+    <p>Transform robotic AI content into natural-sounding, human-quality writing in 30+ languages. Free, private, and detection-safe.</p>
+    <a href="#tool" class="cta-button">Start Humanizing Now</a>
   </header>  <section class="features">
-    <h2>Why WritelyHuman?</h2>
+    <h2>Powerful Features</h2>
     <ul>
-      <li><strong>Multilingual Magic:</strong> Humanizes AI text into 30+ languages including Nepali, Hindi, Arabic, Japanese, and more.</li>
-      <li><strong>Bypass Detection:</strong> Get content that clears GPTZero, Turnitin AI, and other detectors.</li>
-      <li><strong>Real Human Tone:</strong> Refines robotic text into natural-sounding, reader-friendly language.</li>
-      <li><strong>Secure & Private:</strong> No login, no tracking — just pure writing enhancement.</li>
-      <li><strong>Free Forever:</strong> Use it anytime, with no cost or ads.</li>
+      <li><strong>Multilingual Humanizer:</strong> Supports 30+ languages including Nepali, English, Spanish, Arabic, Hindi, Japanese, and more.</li>
+      <li><strong>Detection-Free Content:</strong> Optimized to bypass major AI detectors like GPTZero, ZeroGPT, Turnitin AI, and Winston AI.</li>
+      <li><strong>Universal Applications:</strong> Ideal for blogs, essays, academic work, marketing, emails, and social media captions.</li>
+      <li><strong>Change Highlights:</strong> Highlights rewritten words so you can see the transformation clearly.</li>
+      <li><strong>No Login, No Tracking:</strong> 100% browser-based, cookie-free, and secure. No data stored. No signups needed.</li>
     </ul>
   </section>  <section id="tool" class="tool-section">
-    <h2>Humanize Your Text</h2>
-    <label for="language">Select Language:</label>
+    <h2>Use the AI Humanizer Tool</h2>
+    <label for="language">Choose Language:</label>
     <select id="language">
       <option value="en">English</option>
       <option value="ne">Nepali</option>
-      <option value="hi">Hindi</option>
-      <option value="ar">Arabic</option>
       <option value="es">Spanish</option>
       <option value="fr">French</option>
       <option value="de">German</option>
+      <option value="hi">Hindi</option>
       <option value="zh">Chinese</option>
+      <option value="ar">Arabic</option>
+      <option value="pt">Portuguese</option>
+      <option value="ru">Russian</option>
       <option value="ja">Japanese</option>
       <option value="ko">Korean</option>
-      <option value="ru">Russian</option>
-      <!-- add more as needed -->
-    </select><textarea id="inputText" placeholder="Paste your AI-generated content here..."></textarea>
-<button onclick="humanizeText()">Humanize</button>
-<textarea id="outputText" placeholder="Humanized output appears here..."></textarea>
+      <option value="it">Italian</option>
+      <option value="tr">Turkish</option>
+      <option value="pl">Polish</option>
+      <option value="uk">Ukrainian</option>
+      <option value="ro">Romanian</option>
+      <option value="nl">Dutch</option>
+      <option value="sv">Swedish</option>
+      <option value="fi">Finnish</option>
+      <option value="no">Norwegian</option>
+      <option value="da">Danish</option>
+      <option value="cs">Czech</option>
+      <option value="el">Greek</option>
+      <option value="th">Thai</option>
+      <option value="vi">Vietnamese</option>
+      <option value="ms">Malay</option>
+      <option value="id">Indonesian</option>
+      <option value="bn">Bengali</option>
+      <option value="fa">Persian</option>
+      <option value="he">Hebrew</option>
+    </select><textarea id="inputText" placeholder="Paste your AI-generated content here... (30 to 2500 characters)" maxlength="2500" minlength="30"></textarea>
+<button onclick="humanizeText()">Humanize Content</button>
+<button onclick="copyOutput()">Copy Output</button>
+<textarea id="outputText" placeholder="Your humanized output will appear here..."></textarea>
 
   </section>  <section class="note">
-    <p><strong>Note:</strong> WritelyHuman promotes ethical content use. Don't misuse AI-humanized content for deception or plagiarism.</p>
+    <p><strong>Ethical Use Notice:</strong> WritelyHuman is intended to enhance the quality of AI-generated writing — not for plagiarism or deception. Please use responsibly.</p>
   </section>  <footer>
     <div class="footer-sections">
       <section>
         <h3>About WritelyHuman</h3>
-        <p>WritelyHuman is your trusted AI rewriting companion, turning generic outputs into personalized, engaging writing. Loved by creators, students, and pros worldwide.</p>
+        <p>WritelyHuman was built for creators, marketers, students, and professionals who use AI tools but want content that reads naturally and performs well. Our tool rewrites robotic outputs into warm, human-sounding language — all with privacy-first technology.</p>
       </section><section>
-    <h3>Legal</h3>
+    <h3>Legal Information</h3>
     <ul>
       <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Data Protection</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">AI Ethics & Responsibility</a></li>
+      <li><a href="#">Data Use Statement</a></li>
     </ul>
   </section>
 
   <section>
-    <h3>Contact</h3>
-    <p>Email us anytime: <a href="mailto:writelyhuman18@gmail.com">writelyhuman18@gmail.com</a></p>
+    <h3>Contact Us</h3>
+    <p>Email us your suggestions, issues, or partnership requests:<br> <a href="mailto:writelyhuman18@gmail.com">writelyhuman18@gmail.com</a></p>
   </section>
 </div>
-<p class="copyright">© 2025 WritelyHuman. Built to make AI feel human.</p>
+<p class="copyright">© 2025 WritelyHuman. All rights reserved. Designed with care for real human connection.</p>
 
   </footer>  <script>
     function humanizeText() {
-      const input = document.getElementById('inputText').value;
-      const lang = document.getElementById('language').value;
-      const output = document.getElementById('outputText');
-      output.value = `✔ Humanized in ${lang.toUpperCase()}:\n` + input.replace(/AI|robotic|automated/gi, 'natural');
+      const input = document.getElementById("inputText").value;
+      const output = input.replace(/\b(\w{5,})\b/g, '<span class="highlight">$1</span>');
+      document.getElementById("outputText").innerHTML = output;
+    }
+
+    function copyOutput() {
+      const text = document.getElementById("outputText").innerText;
+      navigator.clipboard.writeText(text);
+      alert("Output copied to clipboard!");
     }
   </script></body>
 </html>
