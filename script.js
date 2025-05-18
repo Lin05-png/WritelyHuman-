@@ -1,81 +1,28 @@
-const inputText = document.getElementById("inputText");
-const outputText = document.getElementById("outputText");
-const languageSelect = document.getElementById("languageSelect");
-const toneSelect = document.getElementById("toneSelect");
-const humanizeBtn = document.getElementById("humanizeBtn");
+// script.js – Full functionality for WritelyHuman
 
-humanizeBtn.addEventListener("click", () => {
-  const text = inputText.value.trim();
-  const language = languageSelect.value;
-  const tone = toneSelect.value;
+// Language map (for future multilingual expansion if needed) const languageMap = { en: 'English', es: 'Spanish', fr: 'French', de: 'German', hi: 'Hindi', zh: 'Chinese', ar: 'Arabic', pt: 'Portuguese', ru: 'Russian', ja: 'Japanese', ko: 'Korean', it: 'Italian', tr: 'Turkish', pl: 'Polish', uk: 'Ukrainian', ro: 'Romanian', nl: 'Dutch', sv: 'Swedish', fi: 'Finnish', no: 'Norwegian', da: 'Danish', cs: 'Czech', el: 'Greek', th: 'Thai', vi: 'Vietnamese', ms: 'Malay', id: 'Indonesian', bn: 'Bengali', fa: 'Persian', he: 'Hebrew', ne: 'Nepali' };
 
-  if (text === "") {
-    outputText.value = "Please enter some text to humanize.";
-    return;
-  }
+// Humanize function – core text rewrite simulation function humanizeText() { const input = document.getElementById("inputText").value.trim(); const lang = document.getElementById("language").value; const output = document.getElementById("outputText");
 
-  // Simulated humanization (replace with API if needed)
-  const humanized = simulateHumanize(text, language, tone);
-  outputText.value = humanized;
-});
+if (!input) { output.value = "Please paste or type content to humanize."; return; }
 
-function simulateHumanize(text, lang, tone) {
-  // Replace common AI patterns
-  let modified = text
-    .replace(/In conclusion,|Therefore,|Hence,/gi, "To wrap it up,")
-    .replace(/Furthermore,|Moreover,/gi, "Also,")
-    .replace(/It is important to note that/gi, "Keep in mind that")
-    .replace(/\butilize\b/gi, "use")
-    .replace(/\bcommence\b/gi, "start")
-    .replace(/\bassist\b/gi, "help");
+// Simulate humanizing: replace robotic phrases, vary sentence structures let rewritten = input .replace(/\bmoreover\b/gi, "furthermore") .replace(/\bin conclusion\b/gi, "to sum it up") .replace(/\badditionally\b/gi, "what’s more") .replace(/\btherefore\b/gi, "so") .replace(/\bthus\b/gi, "as a result") .replace(/\bAI\b/gi, "artificial intelligence") .replace(/\bThis tool\b/gi, "WritelyHuman") .replace(/\btext\b/gi, "writing") .replace(/\bcontent\b/gi, "message") .replace(/\bgenerate\b/gi, "create") .replace(/\boptimize\b/gi, "refine") .replace(/\butilize\b/gi, "use") .replace(/\bdue to the fact that\b/gi, "because") .replace(/\bprovides\b/gi, "offers");
 
-  modified += `\n\n[Humanized in ${getLangName(lang)} | Tone: ${tone.charAt(0).toUpperCase() + tone.slice(1)}]`;
-  return modified;
-}
+// Highlight changed parts by marking keywords (simple simulation) const highlights = ["furthermore", "to sum it up", "what’s more", "so", "as a result", "artificial intelligence", "WritelyHuman", "writing", "message", "create", "refine", "use", "because", "offers"];
 
-function getLangName(code) {
-  const langs = {
-    en: "English", hi: "Hindi", es: "Spanish", fr: "French",
-    de: "German", ru: "Russian", zh: "Chinese", ja: "Japanese",
-    ko: "Korean", ar: "Arabic"
-  };
-  return langs[code] || "Selected Language";
-}
+highlights.forEach(word => { const regex = new RegExp(\\b${word}\\b, 'gi'); rewritten = rewritten.replace(regex, match => <mark>${match}</mark>); });
 
-function copyOutput() {
-  outputText.select();
-  document.execCommand("copy");
-  alert("Text copied to clipboard!");
-}
+// Inject to output (render as HTML) document.getElementById("outputText").innerHTML = rewritten; }
 
-function clearText() {
-  inputText.value = "";
-  outputText.value = "";
-}
+// Optional: Voice input functionality (not active by default) function startListening() { if (!('webkitSpeechRecognition' in window)) { alert("Speech recognition not supported in this browser."); return; }
 
-// Microphone / Speech-to-Text Feature
-function startMicrophone() {
-  if (!("webkitSpeechRecognition" in window)) {
-    alert("Your browser doesn't support speech recognition.");
-    return;
-  }
+const recognition = new webkitSpeechRecognition(); recognition.lang = 'en-US'; recognition.interimResults = false; recognition.maxAlternatives = 1;
 
-  const recognition = new webkitSpeechRecognition();
-  recognition.lang = "en-US";
-  recognition.interimResults = false;
-  recognition.maxAlternatives = 1;
+recognition.onresult = function(event) { const spokenText = event.results[0][0].transcript; document.getElementById("inputText").value += spokenText + " "; };
 
-  recognition.onresult = function (event) {
-    inputText.value += event.results[0][0].transcript;
-  };
+recognition.onerror = function(event) { alert("Speech error: " + event.error); };
 
-  recognition.onerror = function (event) {
-    alert("Error with microphone: " + event.error);
-  };
+recognition.start(); }
 
-  recognition.start();
-}
+// Copy output function copyOutput() { const dummy = document.createElement("textarea"); dummy.value = document.getElementById("outputText").innerText; document.body.appendChild(dummy); dummy.select(); document.execCommand("copy"); document.body.removeChild(dummy); alert("Humanized content copied to clipboard."); }
 
-function regenerateText() {
-  humanizeBtn.click();
-}
