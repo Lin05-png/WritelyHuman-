@@ -2,23 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google site verification -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="aZELGtkjlI6CUZ1x9CWH3obOfAnl3M5-lhVlWFkFKhM" />
-
-  <meta name="description" content="WritelyHuman – The ultimate AI Humanizer tool that supports 30+ languages. Perfect for making AI content sound real and human." />
-  <meta name="keywords" content="AI Humanizer, Humanize AI Text, Bypass AI Detection, WritelyHuman Tool, 30+ languages" />
-  <meta name="author" content="WritelyHuman" />
-  <meta name="robots" content="index, follow" />
-  <title>WritelyHuman - Humanize AI Text Easily</title>
+  <meta name="description" content="WritelyHuman transforms AI-generated text into natural, human-like writing with ease." />
+  <title>WritelyHuman – AI Text Humanizer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <h1>WritelyHuman</h1>
-      <nav>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">WritelyHuman</h1>
+      <nav class="nav">
         <a href="#about">About</a>
         <a href="#privacy">Privacy</a>
         <a href="#terms">Terms</a>
@@ -27,48 +21,41 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>AI Humanizer Tool</h2>
-      <p>Convert robotic AI text into natural, human-like content. Supports <strong>30+ languages</strong>. SEO and AdSense ready.</p>
+  <main class="main-content container">
+    <section class="intro">
+      <h2>Make AI Text Sound Human</h2>
+      <p>Transform AI-generated content into clear, natural writing that flows effortlessly.</p>
     </section>
 
-    <section class="tool">
-      <textarea id="inputText" placeholder="Paste AI text here..."></textarea>
-      <button onclick="humanizeText()">Humanize</button>
-      <div id="outputBox">
-        <h3>Humanized Output</h3>
-        <pre id="outputText"></pre>
-        <button onclick="copyOutput()">Copy Text</button>
+    <section class="tool-section">
+      <textarea id="inputText" placeholder="Paste your AI-generated text here..." rows="8"></textarea>
+      <button id="humanizeBtn">Humanize Text</button>
+      <div class="output-area">
+        <h3>Output</h3>
+        <pre id="outputText" aria-live="polite"></pre>
+        <button id="copyBtn">Copy Output</button>
       </div>
-      <p class="support-note">Supports 30+ languages including English, Nepali, Hindi, Spanish, French, and more.</p>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-content">
-      <section id="about">
-        <h4>About WritelyHuman</h4>
-        <p>WritelyHuman is an AI-powered humanizer that transforms AI-generated content into natural-sounding human text, helping you pass AI detectors and create authentic writing.</p>
-      </section>
-
-      <section id="privacy">
-        <h4>Privacy Policy</h4>
-        <p>We value your privacy. No user data is stored or tracked. This tool works locally in your browser.</p>
-      </section>
-
-      <section id="terms">
-        <h4>Terms & Conditions</h4>
-        <p>This tool is provided as-is for educational and productivity use. You are responsible for how you use the output.</p>
-      </section>
-
-      <section id="contact">
-        <h4>Contact</h4>
-        <p>For suggestions or feedback, contact us via GitHub or email: writelyhuman@gmail.com</p>
-      </section>
-
-      <p class="bottom-note">© 2025 WritelyHuman. All rights reserved.</p>
-    </div>
+  <footer class="footer container">
+    <section id="about">
+      <h4>About WritelyHuman</h4>
+      <p>WritelyHuman helps you convert AI text into natural, readable writing, perfect for blogs, articles, and more.</p>
+    </section>
+    <section id="privacy">
+      <h4>Privacy Policy</h4>
+      <p>Your text stays on your device — we don't store or track your content.</p>
+    </section>
+    <section id="terms">
+      <h4>Terms & Conditions</h4>
+      <p>Use this tool responsibly. We are not liable for misuse of generated content.</p>
+    </section>
+    <section id="contact">
+      <h4>Contact</h4>
+      <p>Email: <a href="mailto:writelyhuman@gmail.com">writelyhuman@gmail.com</a></p>
+    </section>
+    <p class="copyright">© 2025 WritelyHuman</p>
   </footer>
 
   <script src="script.js"></script>
