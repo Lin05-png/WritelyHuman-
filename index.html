@@ -1,77 +1,93 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="aZELGtkjlI6CUZ1x9CWH3obOfAnl3M5-lhVlWFkFKhM" />
-  <meta name="description" content="WritelyHuman – The ultimate AI Humanizer tool that supports 30+ languages. Perfect for making AI content sound real and human." />
-  <meta name="keywords" content="AI humanizer, rewrite AI, humanize AI content, multilingual rewriter, SEO humanizer" />
-  <title>WritelyHuman - Humanize AI Text in 30+ Languages</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="WritelyHuman – The ultimate AI Humanizer tool supporting 30+ languages. Make AI-generated text sound natural, readable, and SEO-ready." />
+  <meta name="keywords" content="AI humanizer, human text generator, AI detection free, SEO friendly text, 30+ language support, AdSense approved tool" />
+  <meta name="author" content="WritelyHuman Team" />
+  <title>WritelyHuman – AI Humanizer Tool (30+ Languages, Detection Free)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
     <h1>WritelyHuman</h1>
-    <p>AI Humanizer Tool - Supports Over 30 Languages</p>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="mailto:writelyhuman18@gmail.com">Contact</a>
-    </nav>
-  </header>  <main>
-    <h2>Humanize AI Text Instantly</h2>
-    <textarea id="inputText" placeholder="Paste AI-generated text here..."></textarea>
-    <select id="languageSelect">
-      <option value="en">English</option>
-      <option value="ne">Nepali</option>
-      <option value="hi">Hindi</option>
-      <option value="bn">Bengali</option>
-      <option value="ur">Urdu</option>
-      <option value="ta">Tamil</option>
-      <option value="te">Telugu</option>
-      <option value="ml">Malayalam</option>
-      <option value="kn">Kannada</option>
-      <option value="gu">Gujarati</option>
-      <option value="mr">Marathi</option>
-      <option value="pa">Punjabi</option>
-      <option value="or">Odia</option>
-      <option value="si">Sinhala</option>
-      <option value="zh">Chinese</option>
-      <option value="ja">Japanese</option>
-      <option value="ko">Korean</option>
-      <option value="th">Thai</option>
-      <option value="vi">Vietnamese</option>
-      <option value="id">Indonesian</option>
-      <option value="ms">Malay</option>
-      <option value="ru">Russian</option>
-      <option value="uk">Ukrainian</option>
-      <option value="fa">Persian</option>
-      <option value="ar">Arabic</option>
-      <option value="tr">Turkish</option>
-      <option value="fr">French</option>
-      <option value="es">Spanish</option>
-      <option value="de">German</option>
-      <option value="pt">Portuguese</option>
-      <option value="it">Italian</option>
-      <option value="ro">Romanian</option>
-    </select>
-    <button onclick="humanizeText()">Humanize Text</button>
-    <button onclick="copyOutput()">Copy Output</button>
-    <div id="outputContainer"></div><section class="blog">
-  <h2>Why Use WritelyHuman?</h2>
-  <p>WritelyHuman helps convert robotic AI-generated content into natural, human-like writing. With support for over 30 global languages, it's a perfect fit for content creators, students, marketers, and bloggers.</p>
-  <h3>Main Features</h3>
-  <ul>
-    <li>SEO-friendly and human-readable output</li>
-    <li>30+ language options</li>
-    <li>Fast performance and mobile responsive</li>
-    <li>Content that passes AI detection</li>
-  </ul>
-  <h3>Google AdSense Ready</h3>
-  <p>This site includes quality articles, proper meta tags, a privacy policy, and other requirements for quick AdSense approval.</p>
-</section>
+    <p>The Ultimate AI Humanizer Tool – 30+ Language Support | SEO Friendly | AdSense Ready</p>
+  </header>
 
-  </main>  <footer>
-    <p>&copy; 2025 WritelyHuman | writelyhuman18@gmail.com</p>
-  </footer>  <script src="script.js"></script></body>
+  <main>
+    <section class="tool">
+      <label for="inputText">Enter AI Text:</label>
+      <textarea id="inputText" placeholder="Paste AI-generated content here..."></textarea>
+
+      <label for="language">Choose Language:</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="ne">Nepali</option>
+        <option value="hi">Hindi</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="pt">Portuguese</option>
+        <option value="ru">Russian</option>
+        <option value="ja">Japanese</option>
+        <option value="zh">Chinese</option>
+        <option value="ko">Korean</option>
+        <option value="ar">Arabic</option>
+        <option value="tr">Turkish</option>
+        <option value="th">Thai</option>
+        <option value="bn">Bengali</option>
+        <option value="pa">Punjabi</option>
+        <option value="ur">Urdu</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option value="ml">Malayalam</option>
+        <option value="gu">Gujarati</option>
+        <option value="mr">Marathi</option>
+        <option value="sw">Swahili</option>
+        <option value="id">Indonesian</option>
+        <option value="vi">Vietnamese</option>
+        <option value="fa">Persian</option>
+        <option value="pl">Polish</option>
+        <option value="uk">Ukrainian</option>
+        <option value="ro">Romanian</option>
+      </select>
+
+      <button onclick="humanizeText()">Humanize</button>
+    </section>
+
+    <section class="output">
+      <h2>Humanized Output:</h2>
+      <div id="outputBox"></div>
+      <button onclick="copyOutput()">Copy Text</button>
+    </section>
+
+    <section class="blog-section">
+      <h2>From Our Blog</h2>
+      <article>
+        <h3>Why Humanized AI Content Is Key for SEO</h3>
+        <p>AI-generated content often lacks the nuances of human tone, context, and emotional touch. WritelyHuman bridges this gap and helps pass AI detection tools, making your content more organic and ranking-friendly.</p>
+      </article>
+      <article>
+        <h3>How WritelyHuman Helps You Get AdSense Approval</h3>
+        <p>Google AdSense requires high-quality, original, readable content. Our tool rewrites AI content into human-level natural language that complies with AdSense policies, giving you a better chance for approval.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact</a>
+    </nav>
+    <p>© 2025 WritelyHuman. Built with purpose for content creators.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
