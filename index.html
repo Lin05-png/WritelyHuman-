@@ -1,98 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="aZELGtkjlI6CUZ1x9CWH3obOfAnl3M5-lhVlWFkFKhM" />
-  <meta name="title" content="WritelyHuman – Humanize AI Text Instantly" />
   <meta name="description" content="WritelyHuman – The ultimate AI Humanizer tool that supports 30+ languages. Perfect for making AI content sound real and human." />
-  <meta name="keywords" content="AI humanizer, rewrite text, humanize AI, AdSense approved, WritelyHuman" />
-  <meta property="og:title" content="WritelyHuman – Humanize AI Text Instantly" />
-  <meta property="og:description" content="Make AI text sound natural. Pass AI detectors with WritelyHuman." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://writelyhuman.blogspot.com" />
-  <meta name="robots" content="index, follow" />
-  <title>WritelyHuman – AI Text Humanizer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="keywords" content="AI humanizer, rewrite AI, humanize AI content, multilingual rewriter, SEO humanizer" />
+  <title>WritelyHuman - Humanize AI Text in 30+ Languages</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>WritelyHuman</h1>
-    <p>Make Your AI Text Sound 100% Human</p>
-  </header>
-
-  <!-- AdSense Placeholder -->
-  <div class="adsense-top"><!-- Google AdSense Code --></div>
-
-  <main>
-    <section class="tool">
-      <label for="language">Choose Language:</label>
-      <select id="language">
-        <option value="en">English</option>
-        <option value="ne">Nepali</option>
-        <option value="hi">Hindi</option>
-        <option value="fr">French</option>
-        <option value="es">Spanish</option>
-        <option value="de">German</option>
-        <option value="zh">Chinese</option>
-        <option value="ar">Arabic</option>
-        <option value="ru">Russian</option>
-        <option value="pt">Portuguese</option>
-        <option value="bn">Bengali</option>
-        <option value="ja">Japanese</option>
-        <option value="ko">Korean</option>
-        <option value="tr">Turkish</option>
-        <option value="it">Italian</option>
-        <option value="pl">Polish</option>
-        <option value="ro">Romanian</option>
-        <option value="th">Thai</option>
-        <option value="vi">Vietnamese</option>
-        <option value="sw">Swahili</option>
-        <option value="id">Indonesian</option>
-        <option value="ms">Malay</option>
-        <option value="uk">Ukrainian</option>
-        <option value="ur">Urdu</option>
-        <option value="fa">Persian</option>
-        <option value="ta">Tamil</option>
-        <option value="te">Telugu</option>
-        <option value="gu">Gujarati</option>
-        <option value="kn">Kannada</option>
-        <option value="ml">Malayalam</option>
-      </select>
-
-      <textarea id="inputText" placeholder="Paste AI text here..."></textarea>
-      <button id="humanizeBtn">Humanize Now</button>
-
-      <div class="options">
-        <label><input type="checkbox" id="highlightToggle" checked /> Highlight Changes</label>
-      </div>
-
-      <div id="outputSection">
-        <div id="outputText"></div>
-        <div class="badge">Human Score: 100% AI Detector Safe</div>
-      </div>
-
-      <div class="buttons">
-        <button id="copyBtn">Copy Output</button>
-        <button id="exportTxt">Export .txt</button>
-        <button id="exportHtml">Export .html</button>
-        <button id="exportMd">Export .md</button>
-      </div>
-    </section>
-  </main>
-
-  <!-- AdSense Placeholder -->
-  <div class="adsense-bottom"><!-- Google AdSense Code --></div>
-
-  <footer>
+    <p>AI Humanizer Tool - Supports Over 30 Languages</p>
     <nav>
-      <a href="#">About</a> |
-      <a href="#">Privacy Policy</a> |
-      <a href="#">Terms & Conditions</a>
+      <a href="#">Home</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="mailto:writelyhuman18@gmail.com">Contact</a>
     </nav>
-    <p>Contact: writelyhuman18@gmail.com</p>
-  </footer>
+  </header>  <main>
+    <h2>Humanize AI Text Instantly</h2>
+    <textarea id="inputText" placeholder="Paste AI-generated text here..."></textarea>
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="ne">Nepali</option>
+      <option value="hi">Hindi</option>
+      <option value="bn">Bengali</option>
+      <option value="ur">Urdu</option>
+      <option value="ta">Tamil</option>
+      <option value="te">Telugu</option>
+      <option value="ml">Malayalam</option>
+      <option value="kn">Kannada</option>
+      <option value="gu">Gujarati</option>
+      <option value="mr">Marathi</option>
+      <option value="pa">Punjabi</option>
+      <option value="or">Odia</option>
+      <option value="si">Sinhala</option>
+      <option value="zh">Chinese</option>
+      <option value="ja">Japanese</option>
+      <option value="ko">Korean</option>
+      <option value="th">Thai</option>
+      <option value="vi">Vietnamese</option>
+      <option value="id">Indonesian</option>
+      <option value="ms">Malay</option>
+      <option value="ru">Russian</option>
+      <option value="uk">Ukrainian</option>
+      <option value="fa">Persian</option>
+      <option value="ar">Arabic</option>
+      <option value="tr">Turkish</option>
+      <option value="fr">French</option>
+      <option value="es">Spanish</option>
+      <option value="de">German</option>
+      <option value="pt">Portuguese</option>
+      <option value="it">Italian</option>
+      <option value="ro">Romanian</option>
+    </select>
+    <button onclick="humanizeText()">Humanize Text</button>
+    <button onclick="copyOutput()">Copy Output</button>
+    <div id="outputContainer"></div><section class="blog">
+  <h2>Why Use WritelyHuman?</h2>
+  <p>WritelyHuman helps convert robotic AI-generated content into natural, human-like writing. With support for over 30 global languages, it's a perfect fit for content creators, students, marketers, and bloggers.</p>
+  <h3>Main Features</h3>
+  <ul>
+    <li>SEO-friendly and human-readable output</li>
+    <li>30+ language options</li>
+    <li>Fast performance and mobile responsive</li>
+    <li>Content that passes AI detection</li>
+  </ul>
+  <h3>Google AdSense Ready</h3>
+  <p>This site includes quality articles, proper meta tags, a privacy policy, and other requirements for quick AdSense approval.</p>
+</section>
 
-  <script src="script.js"></script>
-</body>
+  </main>  <footer>
+    <p>&copy; 2025 WritelyHuman | writelyhuman18@gmail.com</p>
+  </footer>  <script src="script.js"></script></body>
 </html>
