@@ -1,49 +1,142 @@
-/* style.css */
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
 
-/* General Reset */
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
 
-{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+header {
+  text-align: center;
+  background: #5c67f2;
+  color: white;
+  padding: 30px 10px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
 
+header h1 {
+  font-size: 2.5rem;
+}
 
-body { background: #f9f9fb; color: #222; line-height: 1.6; padding: 0 1rem; }
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
 
-header { background: linear-gradient(135deg, #4e54c8, #8f94fb); color: white; text-align: center; padding: 3rem 1rem 2rem; border-radius: 0 0 20px 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+main {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-.cta-button { display: inline-block; margin-top: 1rem; background-color: #ffffff; color: #4e54c8; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: bold; text-decoration: none; transition: 0.3s ease-in-out; }
+.tool {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-.cta-button:hover { background-color: #eee; }
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+}
 
-.features, .tool-section, .note, footer { margin: 2rem auto; max-width: 900px; padding: 1rem; background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); }
+select, button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 
-.features ul { list-style: none; padding-left: 1rem; }
+button {
+  background-color: #5c67f2;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-.features li { margin: 0.5rem 0; padding-left: 1rem; position: relative; }
+button:hover {
+  background-color: #434bcc;
+}
 
-.features li::before { content: '✔'; color: #4e54c8; position: absolute; left: 0; }
+.options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-label, select, textarea, button { display: block; width: 100%; margin-top: 1rem; font-size: 1rem; }
+#outputSection {
+  background: #f4f8ff;
+  padding: 15px;
+  border: 1px solid #d0d9ff;
+  border-radius: 10px;
+  margin-top: 10px;
+  min-height: 150px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
-select, textarea { padding: 0.5rem; border: 1px solid #ccc; border-radius: 8px; }
+.highlight {
+  background-color: #fff4c4;
+  font-weight: 500;
+}
 
-textarea { height: 140px; resize: vertical; }
+.badge {
+  margin-top: 10px;
+  background: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
 
-button { background: #4e54c8; color: white; padding: 0.75rem; border: none; border-radius: 8px; margin-top: 0.5rem; cursor: pointer; transition: 0.3s; }
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-button:hover { background: #3b3fc1; }
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  color: #666;
+}
 
-#outputText span.changed { background-color: #ffedcc; font-weight: bold; }
+footer nav {
+  margin-bottom: 10px;
+}
 
-footer { font-size: 0.9rem; color: #666; text-align: center; padding-bottom: 2rem; }
+footer a {
+  color: #5c67f2;
+  text-decoration: none;
+  margin: 0 8px;
+}
 
-.footer-sections { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; padding: 1rem 0; border-top: 1px solid #eee; margin-top: 2rem; }
+footer a:hover {
+  text-decoration: underline;
+}
 
-.footer-sections section { flex: 1 1 250px; }
-
-.footer-sections h3 { color: #4e54c8; margin-bottom: 0.5rem; }
-
-.footer-sections a { color: #4e54c8; text-decoration: none; }
-
-.footer-sections a:hover { text-decoration: underline; }
-
-/* Responsive */ @media (max-width: 768px) { .footer-sections { flex-direction: column; align-items: center; } }
-
+.adsense-top, .adsense-bottom {
+  margin: 20px auto;
+  text-align: center;
+  min-height: 90px;
+}
