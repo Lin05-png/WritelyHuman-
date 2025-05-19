@@ -1,142 +1,88 @@
-/* Reset and global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+/* style.css */
 
 body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
   background: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  padding: 20px;
 }
 
 header {
-  text-align: center;
-  background: #5c67f2;
+  background: linear-gradient(to right, #005bea, #00c6fb);
   color: white;
-  padding: 30px 10px;
-  border-radius: 12px;
-  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center;
 }
 
-header h1 {
-  font-size: 2.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+header nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
 }
 
 main {
   max-width: 900px;
-  margin: auto;
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.tool {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 textarea {
   width: 100%;
-  height: 200px;
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  height: 160px;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #00c6fb;
+  border-radius: 6px;
+  margin-bottom: 15px;
   resize: vertical;
 }
 
-select, button {
+select {
   padding: 10px;
-  font-size: 1rem;
+  border: 2px solid #005bea;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  font-size: 1em;
+  margin-right: 10px;
 }
 
 button {
-  background-color: #5c67f2;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #00c6fb;
   color: white;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #434bcc;
+  background-color: #005bea;
 }
 
-.options {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-#outputSection {
-  background: #f4f8ff;
+#outputContainer {
+  margin-top: 20px;
   padding: 15px;
-  border: 1px solid #d0d9ff;
-  border-radius: 10px;
-  margin-top: 10px;
-  min-height: 150px;
-  position: relative;
-  font-size: 1rem;
-  line-height: 1.5;
+  border: 2px dashed #00c6fb;
+  background: #f1faff;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  font-size: 1.1em;
+  color: #444;
 }
 
-.highlight {
-  background-color: #fff4c4;
-  font-weight: 500;
-}
-
-.badge {
-  margin-top: 10px;
-  background: #4caf50;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  display: inline-block;
-}
-
-.buttons {
-  margin-top: 15px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+.blog h2, .blog h3 {
+  color: #005bea;
 }
 
 footer {
+  background-color: #005bea;
+  color: white;
   text-align: center;
-  font-size: 0.9rem;
+  padding: 10px 0;
   margin-top: 40px;
-  color: #666;
-}
-
-footer nav {
-  margin-bottom: 10px;
-}
-
-footer a {
-  color: #5c67f2;
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.adsense-top, .adsense-bottom {
-  margin: 20px auto;
-  text-align: center;
-  min-height: 90px;
 }
