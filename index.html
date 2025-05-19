@@ -3,89 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Google site verification -->
   <meta name="google-site-verification" content="aZELGtkjlI6CUZ1x9CWH3obOfAnl3M5-lhVlWFkFKhM" />
-  <meta name="description" content="WritelyHuman – The ultimate AI Humanizer tool supporting 30+ languages. Make AI-generated text sound natural, readable, and SEO-ready." />
-  <meta name="keywords" content="AI humanizer, human text generator, AI detection free, SEO friendly text, 30+ language support, AdSense approved tool" />
+  <meta name="description" content="WritelyHuman – The ultimate AI Humanizer tool that supports 30+ languages. Make AI content sound natural and human for SEO and AdSense." />
+  <meta name="keywords" content="AI humanizer, AI to human text, content rewriting, SEO friendly content, AdSense approval tool" />
   <meta name="author" content="WritelyHuman Team" />
-  <title>WritelyHuman – AI Humanizer Tool (30+ Languages, Detection Free)</title>
+  <title>WritelyHuman - AI Humanizer Tool (30+ Languages, SEO & AdSense Ready)</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
     <h1>WritelyHuman</h1>
-    <p>The Ultimate AI Humanizer Tool – 30+ Language Support | SEO Friendly | AdSense Ready</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section class="tool">
-      <label for="inputText">Enter AI Text:</label>
-      <textarea id="inputText" placeholder="Paste AI-generated content here..."></textarea>
-
-      <label for="language">Choose Language:</label>
-      <select id="language">
+    <section class="tool-section">
+      <h2>AI to Human Text Converter</h2>
+      <label for="languageSelect">Choose Language:</label>
+      <select id="languageSelect">
         <option value="en">English</option>
-        <option value="ne">Nepali</option>
         <option value="hi">Hindi</option>
+        <option value="ne">Nepali</option>
         <option value="es">Spanish</option>
         <option value="fr">French</option>
         <option value="de">German</option>
-        <option value="it">Italian</option>
+        <option value="ar">Arabic</option>
         <option value="pt">Portuguese</option>
         <option value="ru">Russian</option>
         <option value="ja">Japanese</option>
         <option value="zh">Chinese</option>
+        <option value="it">Italian</option>
         <option value="ko">Korean</option>
-        <option value="ar">Arabic</option>
-        <option value="tr">Turkish</option>
-        <option value="th">Thai</option>
         <option value="bn">Bengali</option>
-        <option value="pa">Punjabi</option>
+        <option value="ms">Malay</option>
+        <option value="th">Thai</option>
         <option value="ur">Urdu</option>
+        <option value="pl">Polish</option>
+        <option value="tr">Turkish</option>
+        <option value="fa">Farsi</option>
         <option value="ta">Tamil</option>
         <option value="te">Telugu</option>
-        <option value="ml">Malayalam</option>
         <option value="gu">Gujarati</option>
         <option value="mr">Marathi</option>
         <option value="sw">Swahili</option>
-        <option value="id">Indonesian</option>
         <option value="vi">Vietnamese</option>
-        <option value="fa">Persian</option>
-        <option value="pl">Polish</option>
+        <option value="id">Indonesian</option>
         <option value="uk">Ukrainian</option>
         <option value="ro">Romanian</option>
+        <option value="nl">Dutch</option>
+        <option value="cs">Czech</option>
       </select>
 
+      <textarea id="inputText" placeholder="Paste AI-generated text here..."></textarea>
       <button onclick="humanizeText()">Humanize</button>
+      <button onclick="copyOutput()">Copy</button>
+
+      <div id="output" contenteditable="true" class="output-box"></div>
     </section>
 
-    <section class="output">
-      <h2>Humanized Output:</h2>
-      <div id="outputBox"></div>
-      <button onclick="copyOutput()">Copy Text</button>
+    <section class="info-section">
+      <h2>Why WritelyHuman?</h2>
+      <p>Our tool humanizes AI-generated text to make it undetectable and SEO-friendly. With support for over 30 languages, this tool is optimized for bloggers, marketers, and AdSense publishers who want natural, engaging content. No login required. 100% free with optional Pro features in the future.</p>
     </section>
 
-    <section class="blog-section">
-      <h2>From Our Blog</h2>
-      <article>
-        <h3>Why Humanized AI Content Is Key for SEO</h3>
-        <p>AI-generated content often lacks the nuances of human tone, context, and emotional touch. WritelyHuman bridges this gap and helps pass AI detection tools, making your content more organic and ranking-friendly.</p>
-      </article>
-      <article>
-        <h3>How WritelyHuman Helps You Get AdSense Approval</h3>
-        <p>Google AdSense requires high-quality, original, readable content. Our tool rewrites AI content into human-level natural language that complies with AdSense policies, giving you a better chance for approval.</p>
-      </article>
+    <section class="blog-preview">
+      <h2>Latest from Our Blog</h2>
+      <ul>
+        <li><a href="blog.html#article1">How to Get Google AdSense Approval Quickly with AI Content</a></li>
+        <li><a href="blog.html#article2">Why Humanizing AI Content is Essential in 2025</a></li>
+        <li><a href="blog.html#article3">Top 10 Tips to Avoid AI Detection in Your Blog Posts</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <nav>
-      <a href="#">About</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Contact</a>
-    </nav>
-    <p>© 2025 WritelyHuman. Built with purpose for content creators.</p>
+    <p>&copy; 2025 WritelyHuman | Made with purpose. | <a href="mailto:writelyhuman18@gmail.com">Contact Us</a></p>
   </footer>
 
   <script src="script.js"></script>
